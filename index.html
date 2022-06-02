@@ -24,7 +24,7 @@
             <input type="file" id="csv_file" name="csv_file" class="form-control" @change="loadCSV($event)">
         </div>
               
-      <div class="h3"><h3>Relação de operadora ativas ANS</h3></div>
+      <div class="h3"><h3>Relação de operadoras ativas ANS</h3></div>
       <input  type="text" id="Search" placeholder="Digite algo para aparecer os resultados "  v-model="search" name="inputext"  >  
       <!--Tabela que será apresentada quando o arquivo for carregado-->
       <table  v-if="parse_csv" id="tableone"  > 
