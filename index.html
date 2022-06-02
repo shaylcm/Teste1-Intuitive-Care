@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--Cabeçalho do programa-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <!--adicionando bootstrap-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <!--adicionando css-->
+    <link href="style.css"  rel="stylesheet">
+    <!--adicionando VueJS-->
+    <script  src="https://unpkg.com/vue@next"></script>
+    <link rel="shortcut icon" href="searching-bar.png" type="image/x-icon" />
+</head>
+
+<!--Corpo da Estrutura-->
+<body >
+  <div id="logo" ><img src="intuitive.png" alt=""> </div>
+  <div id="app">
+    <div class="container">
+        <div class="inputFile">
+            <input type="file" id="csv_file" name="csv_file" class="form-control" @change="loadCSV($event)">
+        </div>
+              
+      <div class="h3"><h3>Relação de operadora ativas ANS</h3></div>
+      <input  type="text" id="Search" placeholder="Digite algo para aparecer os resultados "  v-model="search" name="inputext"  >  
+      <!--Tabela que será apresentada quando o arquivo for carregado-->
+      <table  v-if="parse_csv" id="tableone"  > 
+        <!--cabeçalho da tabela-->
+            <thead>   
+               <tr ><!--linha-->
+                <th v-for="key in parse_header" 
+                    @click="sortBy(key)"
+                    :class="{ active: sortKey == key }" > 
+                    {{ key }}
+                  <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'"></span>
+                </th>
+              </tr>
+            </thead> 
+         <!--corpo da tabela-->    
+            <Tbody  >  
+               <tr v-for="csv in parse_csv" >
+                <td v-for="key in parse_header" >              
+                    {{csv[key]}}                          
+                 </td>             
+               </tr>
+            </Tbody> 
+          </table> 
+          
+        <!--Tabela que ira conter o resultado da filtragem-->
+          <table  v-if="search" id="tabletwo">   
+        <!--cabeçalho da tabela-->         
+            <thead>              
+              <tr >              
+                <th v-for="key in parse_header" 
+                    @click="sortBy(key)"
+                    :class="{ active: sortKey == key }">                   
+                    {{ key }}
+                   <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'"></span>
+                </th>
+              </tr>
+            </thead> 
+           <td>
+                  <tr v-for="key in dadosFilter"  > <!--loop para percorrer o vetor que contem os elementos da tabela-->
+                  
+                           <td>{{key["Registro ANS"]}}</td>
+                           <td>{{key.CNPJ}}</td>
+                           <td>{{key["Razão Social"]}}</td>
+                           <td>{{key["Nome Fantasia"]}}</td>
+                           <td>{{key.Modalidade}}</td>
+                           <td>{{key.Logradouro}}</td>
+                           <td>{{key.Número}}</td>
+                           <td>{{key.Complemento}}</td>
+                           <td>{{key.Bairro}}</td>
+                           <td>{{key.Cidade}}</td>
+                           <td>{{key.UF}}</td>
+                           <td>{{key.CEP}}</td>
+                           <td>{{key.DDD}}</td>
+                           <td>{{key.Telefone}}</td>
+                           <td>{{key.Fax}}</td>
+                           <td>{{key["Endereço eletrônico"]}}</td>
+                           <td>{{key.Representante}}</td>
+                           <td>{{key["Cargo Representante"]}}</td>
+                           <td>{{key["Data Registro ANS"]}}</td>        
+                   </tr>
+         </td>               
+      </table>       
+    </div>
+  </div>
+</div>
+<script   type="module" src="./script.js"  ></script>
+</body>
+</html>
