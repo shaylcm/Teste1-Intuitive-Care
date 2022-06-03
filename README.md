@@ -15,7 +15,7 @@ O programa é composto dos seguintes arquivos:
 
 
 - Index.html
--style.css
+- style.css
 - script.js (com a implementação do Vuejs)
 
 
