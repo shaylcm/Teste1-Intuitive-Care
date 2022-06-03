@@ -157,48 +157,7 @@ html, body {
       }
       
 
-  /*----------------responsividade ---------------*/
-  @media (min-width:1024px) and (max-width:1300px) 
-  {
-
-    /*tabela dois*/
-    #tabletwo
-    {
-      font-family: arial, sans-serif;
-      visibility: visible  ;
-    
-      width: 100%;
-      position: relative;
-      bottom:50% ;
-      right: 15%;
-  
-    }
-    /*tabela um*/
-    #tableone
-    {
-      font-family: arial, sans-serif;
-      visibility: visible  ;
-    
-      width: 100%;
-
-      position: relative;
-      top: 280px;
-      right: 15%;
-  
-    }
-
-
-    /*imagem logo*/
-    img
-  {
-    width: 20%;
-    position: relative;
-    top: -50px;
-    left: 29%;
-  }
-}
-
-    
+ 
     
 
 
