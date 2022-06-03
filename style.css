@@ -143,6 +143,19 @@ html, body {
     bottom: 65px;
     left: 37%;
   }
+      
+    @media (min-width:1024px) and (max-width:1300px) 
+  {  ]
+      /*imagem logo*/
+    img
+  {
+    width: 30%;
+    position: relative;
+    top: 30px;
+    left: 37%;
+  }
+      }
+      
 
     
 
