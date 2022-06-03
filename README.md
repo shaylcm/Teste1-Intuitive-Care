@@ -11,6 +11,12 @@ Foi disponibilizado um protótipo o qual foi seguido, e além disso, devido
 ao tamanho da tabela por questões de uma melhor apresentação foram feitas
 pequenas alterações no protótipo.
 O programa é composto dos seguintes arquivos:
- Index.html
- style.css
- script.js (com a implementação do Vuejs)
+
+
+
+- Index.html
+-style.css
+- script.js (com a implementação do Vuejs)
+
+
+
