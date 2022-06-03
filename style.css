@@ -80,7 +80,7 @@ html, body {
   {
     width: 25%;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
     left: 37%;
   }
   
@@ -143,6 +143,19 @@ html, body {
     bottom: 50px;
     left: 37%;
   }
+      
+    @media (min-width:1024px) and (max-width:1300px) 
+  {  ]
+      /*imagem logo*/
+    img
+  {
+    width: 30%;
+    position: relative;
+    top: 30px;
+    left: 37%;
+  }
+      }
+      
 
   /*----------------responsividade ---------------*/
   @media (min-width:1024px) and (max-width:1300px) 
