@@ -14,7 +14,7 @@ html, body {
     margin: 0;
     width: 100%;
     position: relative;
-    top: 190spx;
+    top: 190px;
     right: 10%;
 
     
@@ -27,7 +27,7 @@ html, body {
   
     width: 100%;
     position: relative;
-    bottom:50% ;
+    top: 280px ;
     right: 5%;
 
   }
@@ -138,12 +138,54 @@ html, body {
     /*imagem logo*/
     img
   {
-    width: 20%;
+    width: 30%;
     position: relative;
-    bottom: 65px;
+    bottom: 50px;
     left: 37%;
   }
 
+  /*----------------responsividade ---------------*/
+  @media (min-width:1024px) and (max-width:1300px) 
+  {
+
+    /*tabela dois*/
+    #tabletwo
+    {
+      font-family: arial, sans-serif;
+      visibility: visible  ;
+    
+      width: 100%;
+      position: relative;
+      bottom:50% ;
+      right: 15%;
+  
+    }
+    /*tabela um*/
+    #tableone
+    {
+      font-family: arial, sans-serif;
+      visibility: visible  ;
+    
+      width: 100%;
+
+      position: relative;
+      top: 280px;
+      right: 15%;
+  
+    }
+
+
+    /*imagem logo*/
+    img
+  {
+    width: 30%;
+    position: relative;
+    top: 50px;
+    left: 37%;
+  }
+}
+
+    
     
 
 
